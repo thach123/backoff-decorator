@@ -8,6 +8,9 @@ env:
     # The path for Xunit to output test reports
     - XUNIT_FILE=shippable/testresults/result.xml
     - LC_ALL=C
+    # UNITO_NPM_REGISTRY_TOKEN
+    - secure: Pp7U5YtgYoYAgO/UFAuZbQb0esquqGpe2UjIxo03qhBLq6AAD96oX3VOPwheEfQpMckTUm7wMEid29A0z6ssHZ1YBrCLDGBFS3zntg/ITQ7XS9SYRsXJuufxTMSeRSyqQ8M13kYkBHZBkrenL9bcfiCnsryEhy4ZYASYKu4JnqHz1mh8ElSLIgwEoLNQIsbpimr3mbMTJKKMQ0tIB7fLctTv/dI34N48ESgYn5SXEqizUstY4p1tBIIWd6QY52zcRNWXiaFpo7PNOf0OEz9Qq9P9/tDOhRY+qYF0u1jU48W62IOKSYOtzz9LULaE5LrkcZseroykZ34g0G3y0MVXTA==
+      
 
 branches:
   only:
@@ -19,6 +22,7 @@ build:
     - npm run audit
     - npm run lint
     - npm run test:ci
+    - npm run publish-to-npm
 
 integrations:
   notifications:
